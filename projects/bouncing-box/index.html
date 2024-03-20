@@ -15,7 +15,7 @@
 			display: block;
 			position: absolute;
 			top: 100px;
-			left: 0px;  /* <--- Change me! */
+			left: 50px;  /* <--- Change me! */
 		}
 		.board{
 			height: 100vh;
@@ -62,7 +62,7 @@
 			//////////////////////////////////////////////////////////////////
 			
 			// TODO 2 - Variable declarations 
-			
+			var positionX = 0;
 
 			
 			/* 
@@ -71,6 +71,21 @@
 			turn it around! 
 			*/
 			function update() {
+				/*your code to increase positionX by 10 HERE */
+				positionX = positionX + 10;
+				moveBoxTo(positionX);
+
+            // Frame 2
+            positionX = 10 + 10;         // positionX = 20
+            moveBoxTo(positionX);
+
+            // Frame 3
+            positionX = 20 + 10;         // positionX = 30
+            moveBoxTo(positionX);
+
+            // Frame 4
+            positionX = 30 + 10;         // positionX = 40
+            moveBoxTo(positionX);
 				
 
 			};
@@ -81,6 +96,8 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
+				positionX = 0;
+			}
 				
 
 
